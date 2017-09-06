@@ -91,6 +91,7 @@ a[href="#"] {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .detail-image-frame {
@@ -105,11 +106,30 @@ a[href="#"] {
 .detail-image-title {
   font-family: airstreamregular;
   position: absolute;
-  bottom: -16px;
-  left: 4px;
+  bottom: 5px;
+  left: 10px;
   color: white;
   text-shadow: rgba(0,0,0,0.9) 1px 2px 9px;
   font-size: 40px;
+}
+
+.HolyGrail,
+.HolyGrail-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.HolyGrail-nav {
+  order: -1;
+  overflow: auto;
+}
+
+.HolyGrail-ads {
+  overflow: auto;
+}
+
+#right {
+  margin-left: 0;
 }
 
 @media all and (orientation: landscape) {
@@ -121,7 +141,15 @@ a[href="#"] {
   .thumbnail-list {
     flex-direction: column;
     order: 0;
+
+  }
+
+  #left {
     margin-left: 20px;
+  }
+
+  .HolyGrail-ads {
+    margin-right: 20px;
   }
 
   .thumbnail-item {
@@ -130,5 +158,17 @@ a[href="#"] {
 
   .thumbnail-item + .thumbnail-item {
     margin-top: 20px;
+  }
+
+  .HolyGrail-body {
+    flex-direction: row;
+    flex: 1;
+  }
+  .HolyGrail-content {
+    flex: 1;
+  }
+  .HolyGrail-nav, .HolyGrail-ads {
+    /* 12em is the width of the columns */
+    flex: 0 0 12em;
   }
 }
