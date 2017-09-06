@@ -101,6 +101,7 @@ a[href="#"] {
 
 .detail-image {
   width: 90%;
+  max-height: 33vh;
 }
 
 .detail-image-title {
@@ -141,11 +142,15 @@ a[href="#"] {
   .thumbnail-list {
     flex-direction: column;
     order: 0;
-
+    overflow-x: hidden;
   }
 
   #left {
     margin-left: 20px;
+  }
+
+  .detail-image {
+    max-height: none;
   }
 
   .HolyGrail-ads {
